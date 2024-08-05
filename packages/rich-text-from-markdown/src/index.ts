@@ -21,6 +21,9 @@ const markdownNodeTypes = new Map<string, string>([
   ['heading', 'heading'],
   ['text', 'text'],
   ['emphasis', 'text'],
+  ['subscript', 'text'],
+  ['superscript', 'text'],
+  ['span', 'text'],
   ['strong', 'text'],
   ['delete', 'text'],
   ['inlineCode', 'text'],
@@ -51,6 +54,8 @@ const markTypes = new Map([
   ['emphasis', 'italic'],
   ['strong', 'bold'],
   ['inlineCode', 'code'],
+  ['superscript', 'superscript'],
+  ['subscript', 'subscript'],
 ]);
 const markTypeFor = (node: MarkdownNode) => {
   return markTypes.get(node.type);
@@ -82,6 +87,9 @@ const nodeContainerTypes = new Map([
   ['text', 'text'],
   ['emphasis', 'text'],
   ['strong', 'text'],
+  ['subscript', 'text'],
+  ['superscript', 'text'],
+  ['span', 'text'],
   ['inlineCode', 'text'],
 ]);
 
